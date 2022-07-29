@@ -48,3 +48,11 @@
 // data = JSON.parse(get());
 // console.log("2", data);
 // localStorage.clear();
+
+let logoDisplay = document.querySelector(".logoD");
+let amountGenerated = document.querySelector("#amnt");
+let networkProvider = document.querySelector("#network");
+let loadPin = document.querySelector("#loading");
+
+function pinGenerator() {}
+function loadCard() {}

@@ -4,14 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Recharge Card</title>
   </head>
   <body>
-    <div class="container">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="container clearfix">
+      <div class="tophalf">
+        <div class="logoD"></div>
+        <div class="inpD">
+          <label for="network">NETWORK PROVIDER</label>
+          <select name="network" id="network">
+            <option value="mtn">MTN</option>
+            <option value="airtel">AIRTEL</option>
+            <option value="glo">GLO</option>
+            <option value="visa">VISA</option>
+          </select>
+          <br /><br />
+          ENTER AMOUNT <input type="text" id="amnt" /> <br /><br />
+          <div class="g">
+            <button onclick="pinGenerator()">GENERATE PIN</button>
+          </div>
+        </div>
+      </div>
+      <div class="secondhalf">
+        ENTER CODE <input type="text" id="loading" /> <br />
+        <button class="l" onclick="loadCard()">LOAD CARD</button>
+      </div>
+      <div class="downC">
+        <table class="showT"></table>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
