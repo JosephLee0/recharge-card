@@ -40,7 +40,7 @@
 //   return localStorage.getItem("question");
 // }
 
-// let data = JSON.parse(get());
+let data = JSON.parse(get());
 // console.log(data);
 
 // quest[0].question = "president General";
