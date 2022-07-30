@@ -10,14 +10,16 @@
   <body>
     <div class="container clearfix">
       <div class="tophalf">
-        <div class="logoD"></div>
+        <div class="logoD">
+          <img class="logoD" src="/pictures/MTN-logo.jpg" alt="MTN LOGO" />
+        </div>
         <div class="inpD">
           <label for="network">NETWORK PROVIDER</label>
-          <select name="network" id="network">
+          <select name="network" id="network" onchange="changeLogo()">
             <option value="mtn">MTN</option>
             <option value="airtel">AIRTEL</option>
             <option value="glo">GLO</option>
-            <option value="visa">VISA</option>
+            <option value="vodacom">VODACOM</option>
           </select>
           <br /><br />
           ENTER AMOUNT <input type="text" id="amnt" /> <br /><br />
@@ -33,7 +35,31 @@
       <div class="downC">
         <table class="showT"></table>
       </div>
+      <div><button onclick="claerStorage()">CLEAR SCREEN</button></div>
     </div>
+    <div class="modal hidden"></div>
+    <div class="overlay hidden"></div>
+    <script>
+      function changeLogo() {
+        const typeCard = networkProvider.value;
+        if (typeCard == "mtn") {
+          logoDisplay.innerHTML = "";
+          logoDisplay.innerHTML = `<img class="logoD" src="/pictures/MTN-logo.jpg" alt="MTN LOGO" />`;
+        }
+        if (typeCard == "glo") {
+          logoDisplay.innerHTML = "";
+          logoDisplay.innerHTML = `<img class="logoD" src="/pictures/glo-logo.jpg" alt="GLO LOGO" />`;
+        }
+        if (typeCard == "airtel") {
+          logoDisplay.innerHTML = "";
+          logoDisplay.innerHTML = `<img class="logoD" src="/pictures/30455c9384889.57ee562a4fba0.jpg" alt="AIRTEL LOGO" />`;
+        }
+        if (typeCard == "vodacom") {
+          logoDisplay.innerHTML = "";
+          logoDisplay.innerHTML = `<img class="logoD" src="/pictures/303463.jpg" alt="VODACOM LOGO" />`;
+        }
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
