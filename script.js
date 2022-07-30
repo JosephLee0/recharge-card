@@ -152,13 +152,12 @@ function loadCard() {
   match = data.findIndex((element) => {
     return element.pin === onPIn;
   });
-  console.log(match);
   if (match < 0) {
     let html = `<div><h3>INVALID PIN</h3></div>`;
     displayModal(html);
     return;
   }
-  if (match >= 0 && data[match].status == "UNSED") {
+  if (data[match].status == "UNSED") {
     let html = `<div><h3>CARD LOADED SUCCESFULLY</h3></div>`;
     displayModal(html);
     data[match].status = "USED";
